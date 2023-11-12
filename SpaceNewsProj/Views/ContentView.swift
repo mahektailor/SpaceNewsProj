@@ -8,17 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var data = SpaceAPI()
+    @State private var opac = 0.0
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView {
+            VStack {
+            
+            }
+            .environmentObject(data)
+            .onAppear {
+                data.getData()
+                
+                withAnimation(.easeIn(duration: 2)) {
+                    opac = 1.0
+                }
+            }
+            .navigationTitle("Space News")
         }
-        .padding()
     }
 }
 
-#Preview {
-    ContentView()
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
 }
