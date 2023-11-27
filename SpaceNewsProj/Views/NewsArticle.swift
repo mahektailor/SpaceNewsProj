@@ -6,14 +6,50 @@
 //
 
 import SwiftUI
+import CachedAsyncImage
 
 struct NewsArticle: View {
     let title: String
     let imageUrl: String
     let siteName: String
     let summary: String
+    
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .leading){
+            Text(siteName)
+                .foregroundColor(.blue)
+                .italic()
+            
+            HStack (alignment: .center){
+                CachedAsyncImage(url: URL(string: imageUrl), transaction: Transaction(animation: .easeInOut)){phase in
+                    if let image = phase.image{
+                        image
+                            .resizable()
+                            .scaledToFit()
+                            .clipShape(RoundedRectangle(cornerRadius: 25))
+                            .transition(.opacity)
+                           
+                    } else{
+                        HStack{
+                            Color.blue
+                                .frame(width: 200,
+                                       height: 100,
+                                       alignment: .center)
+                        }
+                            
+                    }
+                }
+            }
+            Text(title)
+                .font(.headline)
+                .padding(8)
+            Text (summary)
+                .lineLimit(6 )
+                .font(.body)
+                .padding(8)
+        }
+        
     }
 }
 
