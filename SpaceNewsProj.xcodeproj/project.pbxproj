@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE74F7572B14816B0073D9A4 /* NewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE74F7562B14816B0073D9A4 /* NewsView.swift */; };
+		CE74F7592B14826C0073D9A4 /* NewsArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE74F7582B14826C0073D9A4 /* NewsArticle.swift */; };
 		CEE2BAB62B014A51009322A8 /* SpaceNewsProjApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE2BAB52B014A51009322A8 /* SpaceNewsProjApp.swift */; };
 		CEE2BAB82B014A51009322A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE2BAB72B014A51009322A8 /* ContentView.swift */; };
 		CEE2BABA2B014A53009322A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEE2BAB92B014A53009322A8 /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE74F7562B14816B0073D9A4 /* NewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsView.swift; sourceTree = "<group>"; };
+		CE74F7582B14826C0073D9A4 /* NewsArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsArticle.swift; sourceTree = "<group>"; };
 		CEE2BAB22B014A51009322A8 /* SpaceNewsProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceNewsProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEE2BAB52B014A51009322A8 /* SpaceNewsProjApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceNewsProjApp.swift; sourceTree = "<group>"; };
 		CEE2BAB72B014A51009322A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +80,8 @@
 			isa = PBXGroup;
 			children = (
 				CEE2BAB72B014A51009322A8 /* ContentView.swift */,
+				CE74F7562B14816B0073D9A4 /* NewsView.swift */,
+				CE74F7582B14826C0073D9A4 /* NewsArticle.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -165,7 +171,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEE2BAB82B014A51009322A8 /* ContentView.swift in Sources */,
+				CE74F7572B14816B0073D9A4 /* NewsView.swift in Sources */,
 				CEE2BAB62B014A51009322A8 /* SpaceNewsProjApp.swift in Sources */,
+				CE74F7592B14826C0073D9A4 /* NewsArticle.swift in Sources */,
 				CEE2BAC92B014D87009322A8 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

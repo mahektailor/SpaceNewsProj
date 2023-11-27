@@ -14,8 +14,11 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
+                NewsView()
+                    .opacity(opac)
             
             }
+            .navigationTitle("Space News")
             .environmentObject(data)
             .onAppear {
                 data.getData()
@@ -24,7 +27,7 @@ struct ContentView: View {
                     opac = 1.0
                 }
             }
-            .navigationTitle("Space News")
+            
         }
     }
 }
