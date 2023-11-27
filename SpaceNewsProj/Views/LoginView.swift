@@ -13,8 +13,8 @@ struct LoginView: View {
     @State private var wrongUsername: Float = 0
     @State private var wrongPassword: Float  = 0
     @State private var showingLoginScreen = false
-    
-    
+    @State private var showingAddUserView = false  // Corrected variable name
+
     var body: some View {
         NavigationView {
             ZStack {
@@ -28,7 +28,7 @@ struct LoginView: View {
                     .foregroundColor(.white)
 
                 VStack {
-                    Text("Login")
+                    Text("Space News ")
                         .font(.largeTitle)
                         .bold()
                         .padding()
@@ -50,20 +50,35 @@ struct LoginView: View {
                     
                     Button("Login") {
                         authenticateUser(username: username, password: password)
-                        }
+                    }
                     .foregroundColor(.white)
                     .frame(width: 300, height: 50)
                     .background(Color.blue)
                     .cornerRadius(10)
                     
-                    NavigationLink(destination: Text("You are logged in @\(username)"), isActive: $showingLoginScreen) {
+                    .padding()
+                    
+                    NavigationLink(destination: SpaceNewsViewFinal(), isActive: $showingLoginScreen) {
                         EmptyView()
                     }
+                    
+                    
+                    NavigationLink(destination: AddUserView(), isActive: $showingAddUserView) {
+                        EmptyView()
+                    }
+
+                    Button("Sign Up") {
+                        showingAddUserView = true
+                    }
+                    .foregroundColor(.white)
+                    .frame(width: 300, height: 50)
+                    .background(Color.blue)
+                    .cornerRadius(10)
                 }
             }.navigationBarHidden(true)
         }
     }
-    
+
     func authenticateUser(username: String, password: String) {
         if username.lowercased() == "spacenews" {
             wrongUsername = 0
@@ -79,6 +94,8 @@ struct LoginView: View {
     }
 }
 
-#Preview {
-    LoginView()
+struct LoginView_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginView()
+    }
 }
