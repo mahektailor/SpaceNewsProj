@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SpaceNewsViewFinal: View {
     @StateObject var data = SpaceAPI()
     @State private var opac = 0.0
     
@@ -34,6 +34,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        SpaceNewsViewFinal();
     }
 }
