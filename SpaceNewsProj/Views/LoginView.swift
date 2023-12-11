@@ -13,7 +13,8 @@ struct LoginView: View {
     @State private var wrongUsername: Float = 0
     @State private var wrongPassword: Float  = 0
     @State private var showingLoginScreen = false
-    @State private var showingAddUserView = false  // Corrected variable name
+    @State private var showingAddUserView = false
+    // Corrected variable name
 
     var body: some View {
         NavigationView {
