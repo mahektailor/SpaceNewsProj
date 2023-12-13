@@ -21,7 +21,7 @@ struct SpaceData : Codable, Identifiable {
     @Published var news: [SpaceData] = []
     
     func getData() {
-        guard let url = URL(string: "https://api.spaceflightnewsapi.net/v3/articles?_limit=10") else { return }
+        guard let url = URL(string: "https://api.spaceflightnewsapi.net/v3/articles?_limit=50") else { return }
         
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             // Check if there's data, otherwise return an error object
